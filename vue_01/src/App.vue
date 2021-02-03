@@ -9,15 +9,23 @@
         <p :style="`color: ${card.color}`">{{ card.text }}</p>
       </template>
     </card>
+
+    <list>
+      <template #listItem="listItem">
+        <span style="color: blue">Item {{ listItem.counter }} / {{ listItem.counter1 }}</span>
+      </template>
+    </list>
     
   </div>
 </template>
 
 <script>
 import Card from "./components/Card";
+import List from "./components/List";
+
 export default {
   components: {
-    Card
+    Card, List
   },
   data() {
     return {
